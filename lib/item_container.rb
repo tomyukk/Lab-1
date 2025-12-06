@@ -22,6 +22,11 @@ module MyApplicationTomiuk
 
     module InstanceMethods
       def add_item(item)
+        if item.nil?
+          MyApplicationTomiuk::LoggerManager.log_error('Null error item to collection')
+          raise ArgumentError, "Couldn't add nil item"
+        end
+
         items << item
         MyApplicationTomiuk::LoggerManager.log_processed_file("Item added: #{item.name}")
       end

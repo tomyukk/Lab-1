@@ -1,3 +1,5 @@
+require 'faker'
+
 module MyApplicationTomiuk
   class Item
     include Comparable
@@ -50,9 +52,11 @@ module MyApplicationTomiuk
     alias info to_s
 
     def self.generate_fake
+      price = Faker::Commerce.price(range: 10.0..200.0)
+
       new(
         name: Faker::Commerce.product_name,
-        price: Faker::Commerce.price(range: 10.0..100.0).round(2),
+        price: price.to_f.round(2),
         description: Faker::Lorem.sentence,
         category: Faker::Commerce.department,
         image_path: "images/#{Faker::Lorem.word}.png"
