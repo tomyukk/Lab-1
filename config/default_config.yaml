@@ -1,0 +1,12 @@
+default:
+  # Коренева директорія проєкту
+  root_dir: <%= File.expand_path('../', __FILE__) %>
+
+  # Директорія для конфігів
+  config_dir: config
+
+  # Директорія для YAML-конфігів
+  yaml_dir: config/yaml_config
+
+  # Директорія для медіафайлів
+  media_dir: media
