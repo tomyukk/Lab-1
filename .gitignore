@@ -1,0 +1,16 @@
+# Logs
+/logs/*
+!/logs/.keep
+
+# Output data
+/output/*
+!/output/.keep
+
+# Ruby stuff
+/.bundle/
+/vendor/
+*.gem
+
+# System files
+.DS_Store
+*.swp

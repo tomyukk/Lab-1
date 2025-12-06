@@ -1,0 +1,2 @@
+default_url: "https://quotes.toscrape.com"
+output_format: "csv"
